@@ -1,0 +1,93 @@
+﻿The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+MacBook-Air-de-Ceci:~ ceci$ pwd
+/Users/ceci
+MacBook-Air-de-Ceci:~ ceci$ cd desktop
+MacBook-Air-de-Ceci:desktop ceci$ mkdir Actividades
+MacBook-Air-de-Ceci:desktop ceci$ mkdir "Deportes con pelota" "Deportes acuaticos" "Deportes extremos" "Deportes de invierno" "Deportes de motor"
+MacBook-Air-de-Ceci:desktop ceci$ cd Actividades/
+MacBook-Air-de-Ceci:Actividades ceci$ mkdir "Deportes con pelota" "Deportes acuaticos" "Deportes extremos" "Deportes de invierno" "Deportes de motor"
+MacBook-Air-de-Ceci:Actividades ceci$ ls
+Deportes acuaticos      Deportes de invierno    Deportes extremos
+Deportes con pelota     Deportes de motor
+MacBook-Air-de-Ceci:Actividades ceci$ cd Deportes con pelota
+bash: cd: Deportes: No such file or directory
+MacBook-Air-de-Ceci:Actividades ceci$ cd "Deportes con pelota"
+MacBook-Air-de-Ceci:Deportes con pelota ceci$ touch Futbol
+MacBook-Air-de-Ceci:Deportes con pelota ceci$ cd ..
+MacBook-Air-de-Ceci:Actividades ceci$ cd "Deportes de motor"
+MacBook-Air-de-Ceci:Deportes de motor ceci$ touch Motocross
+MacBook-Air-de-Ceci:Deportes de motor ceci$ cd ..
+MacBook-Air-de-Ceci:Actividades ceci$ cd Deportes de invierno
+bash: cd: Deportes: No such file or directory
+MacBook-Air-de-Ceci:Actividades ceci$ cd "Deportes de invierno"
+MacBook-Air-de-Ceci:Deportes de invierno ceci$ touch Trineo.jpg
+MacBook-Air-de-Ceci:Deportes de invierno ceci$ 
+MacBook-Air-de-Ceci:Actividades ceci$ cd Actividades
+bash: cd: Actividades: No such file or directory
+MacBook-Air-de-Ceci:Actividades ceci$ ls -R
+Deportes acuaticos      Deportes de invierno    Deportes extremos
+Deportes con pelota     Deportes de motor
+
+
+./Deportes acuaticos:
+
+
+./Deportes con pelota:
+Futbol
+
+
+./Deportes de invierno:
+Trineo.jpg
+
+
+./Deportes de motor:
+Motocross
+
+
+./Deportes extremos:
+MacBook-Air-de-Ceci:Actividades ceci$ 
+MacBook-Air-de-Ceci:Actividades ceci$ rm -r "Deportes extremos"
+MacBook-Air-de-Ceci:Actividades ceci$ ls
+Deportes acuaticos      Deportes con pelota     Deportes de invierno    Deportes de motor
+MacBook-Air-de-Ceci:Actividades ceci$ 
+
+
+MacBook-Air-de-Ceci:Actividades ceci$ pwd
+/Users/ceci/desktop/Actividades
+MacBook-Air-de-Ceci:Actividades ceci$ 
+
+
+MacBook-Air-de-Ceci:Actividades ceci$ git init
+ayuda: Usando 'master' como el nombre de la rama inicial. Este nombre de rama predeterminado
+ayuda: est'a sujeto a cambios. Para configurar el nombre de la rama inicial para usar en todos
+ayuda: de sus nuevos repositorios, reprimiendo esta advertencia, llama a:
+ayuda: 
+ayuda:  git config --global init.defaultBranch <nombre>
+ayuda: 
+ayuda: Los nombres com'unmente elegidos en lugar de 'master' son 'main', 'trunk' y
+ayuda: 'development'. Se puede cambiar el nombre de la rama reci'en creada mediante este comando:
+ayuda: 
+ayuda:  git branch -m <nombre>
+Inicializado repositorio Git vac'io en /Users/ceci/Desktop/Actividades/.git/
+MacBook-Air-de-Ceci:Actividades ceci$ git add .
+MacBook-Air-de-Ceci:Actividades ceci$ git commit -m "Primera prueba"
+[master (commit-ra'iz) b6d188d] Primera prueba
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Deportes con pelota/Futbol
+ create mode 100644 Deportes de invierno/Trineo.jpg
+ create mode 100644 Deportes de motor/Motocross
+MacBook-Air-de-Ceci:Actividades ceci$ git remote add origin https://github.com/3Ceci3/PrimeraPruebaIntroAquinoCecilia.git
+MacBook-Air-de-Ceci:Actividades ceci$ git checkout -b ramaPrueba1
+Cambiado a nueva rama 'ramaPrueba1'
+MacBook-Air-de-Ceci:Actividades ceci$ git push origin ramaPrueba1
+Enumerando objetos: 6, listo.
+Contando objetos: 100% (6/6), listo.
+Compresi'on delta usando hasta 2 hilos
+Comprimiendo objetos: 100% (2/2), listo.
+Escribiendo objetos: 100% (6/6), 430 bytes | 107.00 KiB/s, listo.
+Total 6 (delta 0), reusados 0 (delta 0), pack-reusados 0
+To https://github.com/3Ceci3/PrimeraPruebaIntroAquinoCecilia.git
+ * [new branch]      ramaPrueba1 -> ramaPrueba1
+MacBook-Air-de-Ceci:Actividades ceci$
